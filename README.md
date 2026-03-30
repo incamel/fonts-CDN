@@ -9,11 +9,39 @@
 
 ## 📦 사용법
 
-`<head>` 안에 한 줄만 추가하면 모든 폰트를 사용할 수 있습니다.
+### ✅ 방법 1. `<head>` 에 직접 추가
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/incamel/fonts-CDN@main/fonts.css">
 ```
+
+---
+
+### ✅ 방법 2. `reset.scss` 상단에 추가 (권장)
+
+```scss
+// reset.scss 최상단
+@import url('https://cdn.jsdelivr.net/gh/incamel/fonts-CDN@main/fonts.css');
+
+```
+
+> ⚠️ `@import url()` 은 반드시 파일 **최상단**에 위치해야 합니다.
+
+---
+
+### ✅ 방법 3. 그누보드 `head.php` / `_head_sub.php` 에 추가
+
+**메인페이지 (`head.php`)**
+```php
+add_stylesheet('<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/incamel/fonts-CDN@main/fonts.css">', 0);
+```
+
+**서브페이지 (`_head_sub.php`)**
+```php
+add_stylesheet('<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/incamel/fonts-CDN@main/fonts.css">', 0);
+```
+
+> 💡 `add_stylesheet()` 의 두 번째 인자 `0` 은 출력 순서로, 숫자가 작을수록 먼저 로드됩니다.
 
 ---
 
@@ -65,9 +93,16 @@ font-family: 'Noto Serif KR', serif;
 /* 영문 고급 세리프 */
 font-family: 'The Seasons', serif;
 font-family: 'Playfair Display', serif;
+font-family: 'Cormorant Garamond', serif;
 
 /* 일본어 */
 font-family: 'Noto Sans JP', sans-serif;
+
+/* 중국어 간체 */
+font-family: 'Noto Sans SC', sans-serif;
+
+/* 중국어 번체 */
+font-family: 'Noto Sans TC', sans-serif;
 ```
 
 ---
