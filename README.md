@@ -95,5 +95,5 @@ https://cdn.jsdelivr.net/gh/incamel/fonts-CDN@main/fonts.css
 ---
 
 <p align="center">
-  <sub>Maintained by IST Design</sub>
+  <sub>Maintained by rararayup/sub>
 </p>
